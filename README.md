@@ -1,6 +1,6 @@
 # hapi-authentic
 
-a hapi 16.x auth plugin integrating [@articulate/authentic](https://github.com/articulate/authentic)
+A hapi 16.x auth plugin integrating [@articulate/authentic](https://github.com/articulate/authentic).
 
 ## Use
 
