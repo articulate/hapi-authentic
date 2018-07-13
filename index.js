@@ -18,6 +18,8 @@ const scheme = (server, options) => {
   const settings = Hoek.clone(options)
   const authentic = Authentic({ issWhitelist: settings.issWhitelist })
 
+  server.log(['hapi-authentic'], `issuers whitelisted: ${settings.issWhitelist}`)
+
   const authenticate = (request, reply) =>
     Promise.resolve(request)
       .then(extractBearerToken)
