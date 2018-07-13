@@ -27,6 +27,7 @@ lab.experiment('hapi-authentic', () => {
       warnOnUnregistered: false,
       useCleanCache: true,
     })
+    mockery.registerMock('@articulate/authentic', () => mockAuthentic)
   })
 
   lab.afterEach(() => {
@@ -82,7 +83,6 @@ lab.experiment('hapi-authentic', () => {
   lab.experiment('when authentic rejects w/ unauthorized', () => {
     lab.beforeEach(() => {
       mockAuthentic = sandbox.stub().rejects(Boom.unauthorized())
-      mockery.registerMock('@articulate/authentic', () => mockAuthentic)
     })
 
     it('returns 401', () => {
@@ -114,7 +114,6 @@ lab.experiment('hapi-authentic', () => {
   lab.experiment('when authentic resolves', () => {
     lab.beforeEach(() => {
       mockAuthentic = sandbox.stub().resolves({ sub: 'mock-sub' })
-      mockery.registerMock('@articulate/authentic', () => mockAuthentic)
     })
 
     it('returns 200', () => {
