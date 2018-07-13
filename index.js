@@ -3,10 +3,10 @@ const Hoek = require('hoek')
 
 const Authentic = require('@articulate/authentic')
 
-const extractBearerToken = req => {
-  const match = (req.headers.authorization || '').match(/^Bearer (\w*)$/)
-  if (match)
-    return match[1]
+const extractBearerToken = ({ headers: { authorization = '' } }) => {
+  const [, token] = authorization.match(/^Bearer (\w*)$/) || []
+  if (token)
+    return token
   else
     throw Boom.unauthorized(null, 'Missing Bearer token')
 };
