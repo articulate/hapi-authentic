@@ -16,16 +16,12 @@ const scheme = (server, options) => {
   const settings = Hoek.clone(options)
   const authentic = Authentic({ issWhitelist: settings.issWhitelist })
 
-  const authenticate = (request, reply) => {
-    try {
-      const token = extractBearerToken(request)
-      return authentic(token)
-        .then(credentials => reply.continue({ credentials }))
-        .catch(reply)
-    } catch (e) {
-      return reply(e)
-    }
-  }
+  const authenticate = (request, reply) =>
+    Promise.resolve(request)
+      .then(extractBearerToken)
+      .then(authentic)
+      .then(credentials => reply.continue({ credentials }))
+      .catch(reply)
 
   return { authenticate }
 };
