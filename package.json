@@ -4,7 +4,9 @@
   "description": "A hapi 16.x JWT/Bearer auth plugin using [@articulate/authentic](https://github.com/articulate/authentic).",
   "main": "index.js",
   "scripts": {
-    "test": "lab -a code -v -t 100"
+    "lint": "eslint .",
+    "test": "lab -a code -v -t 100",
+    "test:ci": "yarn test && yarn lint"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "code": "^5.2.0",
+    "eslint": "^5.1.0",
     "hapi": "^16",
     "lab": "^15.5.0",
     "mockery": "^2.1.0",

@@ -9,7 +9,7 @@ const extractBearerToken = ({ headers: { authorization = '' } }) => {
     return token
   else
     throw Boom.unauthorized(null, 'Missing Bearer token')
-};
+}
 
 const scheme = (server, options) => {
   Hoek.assert(options, 'Missing authentic auth strategy options')
@@ -28,7 +28,7 @@ const scheme = (server, options) => {
       .catch(reply)
 
   return { authenticate }
-};
+}
 
 const register = (server, options, next) => {
   server.auth.scheme('authentic', scheme)
