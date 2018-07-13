@@ -1,6 +1,6 @@
 # hapi-authentic
 
-A hapi 16.x auth plugin integrating [@articulate/authentic](https://github.com/articulate/authentic).
+A hapi 16.x JWT/Bearer auth plugin using [@articulate/authentic](https://github.com/articulate/authentic).
 
 ## Use
 
