@@ -4,7 +4,7 @@ const Hoek = require('hoek')
 const Authentic = require('@articulate/authentic')
 
 const extractBearerToken = ({ headers: { authorization = '' } }) => {
-  const [, token] = authorization.match(/^Bearer (\w*)$/) || []
+  const [, token] = authorization.match(/^Bearer (.*)$/) || []
   if (token)
     return token
   else
