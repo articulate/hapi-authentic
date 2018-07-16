@@ -1,6 +1,6 @@
 {
   "name": "@articulate/hapi-authentic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A hapi 16.x JWT/Bearer auth plugin using [@articulate/authentic](https://github.com/articulate/authentic).",
   "main": "index.js",
   "scripts": {
