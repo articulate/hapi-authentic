@@ -2,13 +2,14 @@
 # yarn lockfile v1
 
 
-"@articulate/authentic@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@articulate/authentic/-/authentic-0.1.2.tgz#aca53a56e11dfe62da3ebb6251762864089f402c"
+"@articulate/authentic@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@articulate/authentic/-/authentic-1.0.0.tgz#0a9ba1a927d31a63201b812921aaba31c4d37d4c"
+  integrity sha512-JGPNA17pgNNXSckNf0VFQzNgj8KQF9XW530iU5mEcbe5jIvoqnn4xUyCjAfsXyhK03upv/k/iV1o2e1oLrrE3A==
   dependencies:
     "@articulate/funky" "^1.2.0"
     "@articulate/gimme" "^1.0.0"
-    boom "5.2.0"
+    boom "7.3.x"
     jsonwebtoken "^8.1.1"
     jwks-rsa "^1.2.1"
     ramda "^0.25.0"
@@ -273,11 +274,18 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-boom@5.2.0, boom@5.x.x, boom@^5.2.0:
+boom@5.x.x, boom@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/boom/-/boom-5.2.0.tgz#5dd9da6ee3a5f302077436290cb717d3f4a54e02"
   dependencies:
     hoek "4.x.x"
+
+boom@7.3.x:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/boom/-/boom-7.3.0.tgz#733a6d956d33b0b1999da3fe6c12996950d017b9"
+  integrity sha512-Swpoyi2t5+GhOEGw8rEsKvTxFLIDiiKoUc2gsoV6Lyr43LHBIzch3k2MvYUs8RTROrIkVJ3Al0TkaOGjnb+B6A==
+  dependencies:
+    hoek "6.x.x"
 
 boom@7.x.x, boom@^7.2.0:
   version "7.2.0"
@@ -958,6 +966,11 @@ hoek@4.x.x, hoek@^4.2.0:
 hoek@5.x.x, hoek@^5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-5.0.3.tgz#b71d40d943d0a95da01956b547f83c4a5b4a34ac"
+
+hoek@6.x.x:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/hoek/-/hoek-6.1.2.tgz#99e6d070561839de74ee427b61aa476bd6bddfd6"
+  integrity sha512-6qhh/wahGYZHFSFw12tBbJw5fsAhhwrrG/y3Cs0YMTv2WzMnL0oLPnQJjv1QJvEfylRSOFuP+xCu+tdx0tD16Q==
 
 http-errors@1.6.3:
   version "1.6.3"
