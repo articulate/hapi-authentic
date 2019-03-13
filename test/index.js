@@ -111,6 +111,37 @@ lab.experiment('hapi-authentic', () => {
     })
   })
 
+  lab.experiment('when authentic rejects w/ forbidden', () => {
+    lab.beforeEach(() => {
+      mockAuthentic = sandbox.stub().rejects(Boom.forbidden())
+    })
+
+    it('returns 403', () => {
+      const server = new Hapi.Server()
+      server.connection()
+
+      return new Promise((resolve) => {
+        server.register(require('../'), err => {
+          expect(err).to.not.exist()
+          server.auth.strategy('bearer', 'authentic', { issWhitelist: ['https://iss'] })
+          server.route(route)
+          const request = {
+            method: 'GET',
+            url: '/test',
+            headers: {
+              authorization: 'Bearer TOKENBOI'
+            },
+          }
+          server.inject(request, res => {
+            expect(res.statusCode).to.equal(403)
+            expect(res.result.message).to.equal('Forbidden')
+            resolve()
+          })
+        })
+      })
+    })
+  })
+
   lab.experiment('when authentic resolves', () => {
     lab.beforeEach(() => {
       mockAuthentic = sandbox.stub().resolves({ sub: 'mock-sub' })
