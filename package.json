@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/articulate/hapi-authentic#readme",
   "dependencies": {
-    "@articulate/authentic": "^1.0.0",
+    "@articulate/authentic": "^1.1.0",
     "boom": "^7.2.0",
     "hoek": "^5.0.3"
   },
