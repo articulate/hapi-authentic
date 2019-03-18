@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@articulate/authentic@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@articulate/authentic/-/authentic-1.0.0.tgz#0a9ba1a927d31a63201b812921aaba31c4d37d4c"
-  integrity sha512-JGPNA17pgNNXSckNf0VFQzNgj8KQF9XW530iU5mEcbe5jIvoqnn4xUyCjAfsXyhK03upv/k/iV1o2e1oLrrE3A==
+"@articulate/authentic@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@articulate/authentic/-/authentic-1.1.0.tgz#d0ebf2afce3ae4b9be054dc58dafd9ec85a3a519"
+  integrity sha512-EJO4yR1vzLZHVeup/ESd3r5hw6faPfYoywTgTLbl0t/m28nF6aCmXf36sgyLpw1UvK5HYuD99oGLF51fpKq60g==
   dependencies:
     "@articulate/funky" "^1.2.0"
     "@articulate/gimme" "^1.0.0"
